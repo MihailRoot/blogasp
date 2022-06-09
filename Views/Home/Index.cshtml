@@ -1,0 +1,12 @@
+﻿@model IEnumerable<testaundit.Models.blog>;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    @foreach( var item in Model)
+    {
+        <p>@Html.DisplayNameFor(model => model.Name)
+	@Html.DisplayFor(modelItem => item.Name)</p>
+       <p><br>@Html.DisplayNameFor(model => model.text)
+       <br>@Html.DisplayFor(modelItem => item.text)</p>
+    }
