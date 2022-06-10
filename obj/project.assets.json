@@ -10442,24 +10442,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mihail\\.nuget\\packages\\": {}
+    "C:\\Users\\xsere\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mihail\\Desktop\\testaundit\\testaundit\\testaundit.csproj",
+      "projectUniqueName": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\blogasp\\testaundit.csproj",
       "projectName": "testaundit",
-      "projectPath": "C:\\Users\\mihail\\Desktop\\testaundit\\testaundit\\testaundit.csproj",
-      "packagesPath": "C:\\Users\\mihail\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mihail\\Desktop\\testaundit\\testaundit\\obj\\",
+      "projectPath": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\blogasp\\testaundit.csproj",
+      "packagesPath": "C:\\Users\\xsere\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\blogasp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\mihail\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\xsere\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -10523,24 +10525,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[6.0.4, 6.0.4]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[6.0.4, 6.0.4]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[6.0.4, 6.0.4]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[6.0.4, 6.0.4]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -10549,7 +10533,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.4.22252.9\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
       }
     }
   }
