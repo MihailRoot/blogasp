@@ -8,7 +8,7 @@ namespace testaundit.Models
         public string Id { get; set; }
         public string Name { get; set; }
         public int user_id { get; set;  }
-        public ApplicationUser? user { get; set; }
+        public string? user { get; set; }
         [UIHint("MultilineTex")]
         public string text { get; set; }
     }

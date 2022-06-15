@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace testaundit.Migrations
+namespace testaundit.Migrations.ApplicationDb
 {
-    public partial class InitUser : Migration
+    public partial class Initdb1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

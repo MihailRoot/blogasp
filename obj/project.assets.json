@@ -10447,11 +10447,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\blogasp\\testaundit.csproj",
+      "projectUniqueName": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\testaundit\\testaundit\\testaundit.csproj",
       "projectName": "testaundit",
-      "projectPath": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\blogasp\\testaundit.csproj",
+      "projectPath": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\testaundit\\testaundit\\testaundit.csproj",
       "packagesPath": "C:\\Users\\xsere\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\blogasp\\obj\\",
+      "outputPath": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\testaundit\\testaundit\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\xsere\\AppData\\Roaming\\NuGet\\NuGet.Config",

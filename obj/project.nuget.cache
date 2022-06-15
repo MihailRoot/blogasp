@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ado7svFgXDRCoUQ1MTjIy4AuF5er1PnYX6JXE89cpHiEDGyI417NdckVgx1H5g8eagP9xCNRCItCPB33UxEGZg==",
+  "dgSpecHash": "SZhzBPdafZov5aEnXfB6LUqUFrp5+hCNxPIDN04ZsLfVdK4UphfyiHLu9aJ6GQSWKVNPJj7owFgxTiHIxNgeVA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\blogasp\\testaundit.csproj",
+  "projectFilePath": "C:\\Users\\xsere\\OneDrive\\Рабочий стол\\testaundit\\testaundit\\testaundit\\testaundit.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\xsere\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\xsere\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

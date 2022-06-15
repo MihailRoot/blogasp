@@ -8,37 +8,39 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using testaundit.Data;
 using testaundit.Models;
+using Microsoft.AspNetCore.Identity;
 namespace testaundit.Controllers
 {
     public class blogsController : Controller
     {
-      //  private readonly ApplicationUser _applicationUser;
+        //  private readonly ApplicationUser _applicationUser;
         private readonly testaunditContext _context;
-        public blogsController(testaunditContext context)
+        private UserManager<ApplicationUser> _usermanager;
+        public blogsController(testaunditContext context, UserManager<ApplicationUser> userManager)
 
         {
+            _usermanager = userManager;
             //_applicationUser = applicationUser;
             _context = context;
         }
 
         // GET: blogs
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "admin")]
         public async Task<IActionResult> Index()
         {
-              return _context.blog != null ? 
-                          View(await _context.blog.ToListAsync()) :
-                          Problem("Entity set 'testaunditContext.blog'  is null.");
+            return _context.blog != null ?
+                        View(await _context.blog.ToListAsync()) :
+                        Problem("Entity set 'testaunditContext.blog'  is null.");
         }
 
         // GET: blogs/Details/5
-        
         public async Task<IActionResult> Details(string id)
         {
             if (id == null || _context.blog == null)
             {
                 return NotFound();
             }
-            
+
             var blog = await _context.blog
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (blog == null)
@@ -50,6 +52,8 @@ namespace testaundit.Controllers
         }
 
         // GET: blogs/Create
+        [Authorize]
+
         public IActionResult Create()
         {
             return View();
@@ -60,11 +64,15 @@ namespace testaundit.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        
+        [Authorize]
+
         public async Task<IActionResult> Create([Bind("Id,Name,user,text")] blog blog)
         {
             if (ModelState.IsValid)
             {
+                var user = await _usermanager.GetUserAsync(User);
+                var users = user.Email;
+                blog.user = users;
                 _context.Add(blog);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -155,14 +163,21 @@ namespace testaundit.Controllers
             {
                 _context.blog.Remove(blog);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool blogExists(string id)
         {
-          return (_context.blog?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.blog?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+        public async Task<IActionResult> YourBlog( )
+        {
+            var user = await _usermanager.GetUserAsync(User);
+            var users = user.Email;
+            var blog = _context.blog.Where(p => p.user == users);
+            return View(await blog.ToListAsync());
+    }
     }
 }

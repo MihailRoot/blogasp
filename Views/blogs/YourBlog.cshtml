@@ -1,0 +1,8 @@
+﻿@model IEnumerable<testaundit.Models.blog>
+
+@foreach (var item in Model) {
+@Html.DisplayFor(model => item.Name)
+<td>
+<a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+ </td>
+}
